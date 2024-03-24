@@ -28,4 +28,12 @@ public class Ball : MonoBehaviour
 			ballLaunched = true;
 		}
     }
+
+	private void BumperCollision(Collision collision) {
+        var bumper = collision.gameObject.GetComponent<Bumper>();
+        if (bumper != null) {
+            bumper.Bump();
+            //Game.Instance.AddScore(200);
+        }
+	}
 }
