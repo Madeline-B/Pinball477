@@ -6,12 +6,13 @@ public class Ball : MonoBehaviour
 {
 	public GameObject Pinball;
 	private Rigidbody rb;
-	public GameObject BallSensor;
 	public bool ballLaunched = false;
 	
 	public void OnTriggerEnter(Collider other){
+		if (other.CompareTag("Respawn")){
 		ballLaunched = false;
 		Pinball.transform.position = new Vector3(-0.974f,0.807f,-4.475f);
+		}
 	}
 	
     // Start is called before the first frame update
