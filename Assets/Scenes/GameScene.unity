@@ -3276,6 +3276,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 611878711}
+    - target: {fileID: 7220333300845682325, guid: d5c8970b063409c4d8832b61b64d3fc4,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7242396488995780540, guid: d5c8970b063409c4d8832b61b64d3fc4,
         type: 3}
       propertyPath: m_Mesh
@@ -3354,7 +3359,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.05715339, z: 0.01}
   m_Axis: {x: 1, y: 14.64, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.31351942, y: 0.8241148, z: -3.3864355}
+  m_ConnectedAnchor: {x: 0.34051943, y: 0.8231144, z: -3.2904358}
   serializedVersion: 2
   m_UseSpring: 1
   m_Spring:
@@ -3363,7 +3368,7 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
-    targetVelocity: 0
+    targetVelocity: 5
     force: 0
     freeSpin: 0
   m_UseLimits: 1
@@ -3371,7 +3376,7 @@ HingeJoint:
   m_UseAcceleration: 0
   m_Limits:
     min: -45
-    max: 0
+    max: 45
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -3404,7 +3409,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3420,11 +3425,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5556a46dc0e9144ac05836f6482227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftFlipper: {fileID: 1040427581}
   resting: 0
-  dampen: 150
+  dampen: 15
   strength: 10000
-  pressed: 45
+  pressed: -45
+  hinge: {fileID: 1040427583}
 --- !u!1 &1159121393 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2303487819689372048, guid: 9cc0eed4b9aeb314ab5fde74b27533ae,
@@ -4290,6 +4295,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1211998032}
+    - target: {fileID: 7220333300845682325, guid: d5c8970b063409c4d8832b61b64d3fc4,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7242396488995780540, guid: d5c8970b063409c4d8832b61b64d3fc4,
         type: 3}
       propertyPath: m_Mesh
@@ -4363,7 +4373,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.05715301, z: 0.01}
   m_Axis: {x: 1, y: -14.706, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.3811402, y: 0.7877712, z: -3.3190536}
+  m_ConnectedAnchor: {x: -0.46114022, y: 0.7787714, z: -3.2360544}
   serializedVersion: 2
   m_UseSpring: 0
   m_Spring:
@@ -4380,7 +4390,7 @@ HingeJoint:
   m_UseAcceleration: 0
   m_Limits:
     min: -45
-    max: 0
+    max: 45
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -4413,7 +4423,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -4429,11 +4439,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78321ceee1ac3b4284f70e760055433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RightFlipper: {fileID: 1282424216}
   resting: 0
-  dampen: 150
+  dampen: 15
   strength: 10000
   pressed: 45
+  hinge: {fileID: 1282424217}
 --- !u!1 &1314454914
 GameObject:
   m_ObjectHideFlags: 0
@@ -5029,7 +5039,7 @@ PrefabInstance:
     - target: {fileID: 879965300673400587, guid: 9cc0eed4b9aeb314ab5fde74b27533ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.974
+      value: -1.02
       objectReference: {fileID: 0}
     - target: {fileID: 879965300673400587, guid: 9cc0eed4b9aeb314ab5fde74b27533ae,
         type: 3}
@@ -5039,7 +5049,7 @@ PrefabInstance:
     - target: {fileID: 879965300673400587, guid: 9cc0eed4b9aeb314ab5fde74b27533ae,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.475
+      value: -4.454
       objectReference: {fileID: 0}
     - target: {fileID: 879965300673400587, guid: 9cc0eed4b9aeb314ab5fde74b27533ae,
         type: 3}
